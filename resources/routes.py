@@ -1,5 +1,5 @@
 from .client import ClientsApi, ClientApi
-from .OrdenMedica import OrdenesMedicasApi, OrdenMedicaApi
+from .orden_medica import OrdenesMedicasApi, OrdenMedicaApi
 
 
 def initialize_routes(api):
