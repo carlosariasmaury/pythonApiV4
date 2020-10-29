@@ -1,34 +1,37 @@
-""" Class representing a Orden Medica
-    """
 class OrdenMedica():
-
+    """Class representing a Orden Medica"""
     def __init__(self, identifier, status, category):
         self.identifier = identifier
         self.status = status
         self.category = category
-        self.orderDetail = []
+        self.order_detail = []
 
-    def add_orderDetail(self, orderDetail):
-        self.orderDetail.append(orderDetail)
-        return len(self.orderDetail) - 1
+    def add_order_detail(self, order_detail):
+        """ Add Order Detail"""
+        self.order_detail.append(order_detail)
+        return len(self.order_detail) - 1
 
-    def get_orderDetail(self, pIndex):
-        if pIndex >= len(self.orderDetail):
-            return 'There is no such orderDetail'
+    def get_order_detail(self, p_index):
+        """ Gets Order Detail by Index"""
+        if p_index >= len(self.order_detail):
+            return 'There is no such Order Detail'
         else:
-            return self.orderDetail[pIndex]
+            return self.order_detail[p_index]
 
-    def get_all_orderDetail(self):
+    def get_all_order_detail(self):
+        """ Gets all Order Detail"""
         return self.preexistence
 
-    def remove_orderDetail(self, n_orderDetail):
-        self.orderDetail.pop(n_orderDetail)
-        return len(self.orderDetail) - 1
+    def remove_orderDetail(self, n_order_detail):
+        """ Removes Order Detail by Index"""
+        self.order_detail.pop(n_order_detail)
+        return len(self.order_detail) - 1
 
     def get_formatted_OrderStatus(self):
+        """ Gets Order Status"""
         return self.identifier + ' ' + self.status
 
 
 if __name__ == '__main__':
-    client_instance = Client('id1', 'Aprobado', 'Med')
-    print('El Estado de la OM es  ', client_instance.get_formatted_OrderStatus())
+    OrdenMedica_instance = OrdenMedica('id1', 'Aprobado', 'Med')
+    print('El Estado de la OM es  ', OrdenMedica_instance.get_formatted_OrderStatus())
