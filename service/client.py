@@ -1,6 +1,6 @@
 
 class Client():
-""" Class representing a client"""
+    """Class representing a client"""
     def __init__(self, name, last_name, doc_id):
         self.name = name
         self.last_name = last_name
