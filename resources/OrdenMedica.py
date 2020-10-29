@@ -9,7 +9,7 @@ class OrdenMedicaApi(Resource):
         OrdenesMedicas = OrdenMedica.objects().to_json()
         return Response(OrdenesMedicas, mimetype="application/json", status=200)
 
-    @jwt_required
+    #@jwt_required
     def post(self):
         body = request.get_json()
         OrdenMedica = OrdenMedica(**body).save()
@@ -18,13 +18,13 @@ class OrdenMedicaApi(Resource):
 
 
 class OrdenMedicaApi(Resource):
-    @jwt_required
+    #@jwt_required
     def put(self, id):
         body = request.get_json()
         OrdenMedica.objects.get(id=id).update(**body)
         return '', 200
 
-    @jwt_required
+    #@jwt_required
     def delete(self, id):
         OrdenMedica = OrdenMedica.objects.get(id=id).delete()
         return '', 200
