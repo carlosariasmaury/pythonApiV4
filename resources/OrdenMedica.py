@@ -4,7 +4,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask_restful import Resource
 
 
-class OrdenMedicaApi(Resource):
+class OrdenesMedicasApi(Resource):
     def get(self):
         OrdenesMedicas = OrdenMedica.objects().to_json()
         return Response(OrdenesMedicas, mimetype="application/json", status=200)
