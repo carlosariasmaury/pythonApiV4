@@ -20,14 +20,14 @@ class OrdenMedica():
 
     def get_all_order_detail(self):
         """ Gets all Order Detail"""
-        return self.preexistence
+        return self.order_detail
 
-    def remove_orderDetail(self, n_order_detail):
+    def remove_order_detail(self, n_order_detail):
         """ Removes Order Detail by Index"""
         self.order_detail.pop(n_order_detail)
         return len(self.order_detail) - 1
 
-    def get_formatted_OrderStatus(self):
+    def get_formatted_order_status(self):
         """ Gets Order Status"""
         return self.identifier + ' ' + self.status
 
