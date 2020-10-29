@@ -1,3 +1,4 @@
+"""Class representing a Orden Medica"""
 class OrdenMedica():
     """Class representing a Orden Medica"""
     def __init__(self, identifier, status, category):
@@ -34,4 +35,4 @@ class OrdenMedica():
 
 if __name__ == '__main__':
     OrdenMedica_instance = OrdenMedica('id1', 'Aprobado', 'Med')
-    print('El Estado de la OM es  ', OrdenMedica_instance.get_formatted_OrderStatus())
+    print('El Estado de la OM es  ', OrdenMedica_instance.get_formatted_order_status())
