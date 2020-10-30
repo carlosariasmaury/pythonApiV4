@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "1c09cda1-4b13-4aeb-b76d-c3303e24944f",
+		"name": "ProyectoMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST OrdenMedica",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"identifier\": \"Id1\",\r\n  \"status\": \"Filed\",\r\n  \"category\": \"Medication\",\r\n  \"orderDetail\": [\"\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.175.221.86:5001/api/OrdenesMedicas",
+					"protocol": "http",
+					"host": [
+						"35",
+						"175",
+						"221",
+						"86"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"OrdenesMedicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET OrdenesMedicas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.175.221.86:5001/api/OrdenesMedicas",
+					"protocol": "http",
+					"host": [
+						"35",
+						"175",
+						"221",
+						"86"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"OrdenesMedicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE OrdenMedica",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.175.221.86:5001/api/OrdenMedica/5f9c112dd6d568c1d378716b",
+					"protocol": "http",
+					"host": [
+						"35",
+						"175",
+						"221",
+						"86"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"OrdenMedica",
+						"5f9c112dd6d568c1d378716b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT OrdenMedica",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"identifier\": \"Id3\",\r\n  \"status\": \"Complited\",\r\n  \"category\": \"Medication\",\r\n  \"orderDetail\": [\"\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.175.221.86:5001/api/OrdenMedica/5f9c124f9c1b87e6a55b577e",
+					"protocol": "http",
+					"host": [
+						"35",
+						"175",
+						"221",
+						"86"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"OrdenMedica",
+						"5f9c124f9c1b87e6a55b577e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET OrdenMedica",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"identifier\": \"Id3\",\r\n  \"status\": \"Complited\",\r\n  \"category\": \"Medication\",\r\n  \"orderDetail\": [\"\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.175.221.86:5001/api/OrdenMedica/5f9c124f9c1b87e6a55b577e",
+					"protocol": "http",
+					"host": [
+						"35",
+						"175",
+						"221",
+						"86"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"OrdenMedica",
+						"5f9c124f9c1b87e6a55b577e"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
