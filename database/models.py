@@ -7,7 +7,7 @@ class Client(db.Document):
     preexistence = db.ListField(db.StringField(), required=True)
     added_by = db.ReferenceField('User')
     
-class OrdenMedica():
+class OrdenMedica(db.Document):
     identifier  = db.StringField(required=True, unique=True)
     status  = db.StringField(required=True)
     category  = db.StringField(required=True)
