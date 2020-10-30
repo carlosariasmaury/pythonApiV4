@@ -7,9 +7,9 @@ class OrdenMedica():
         self.category = category
         self.order_detail = []
 
-    def add_order_detail(self, order_detail):
+    def add_order_detail(self, n_order_detail):
         """ Add Order Detail"""
-        self.order_detail.append(order_detail)
+        self.order_detail.append(n_order_detail)
         return len(self.order_detail) - 1
 
     def get_order_detail(self, p_index):
