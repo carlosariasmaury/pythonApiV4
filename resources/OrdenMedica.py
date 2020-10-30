@@ -26,6 +26,7 @@ class OrdenMedicaApi(Resource):
 
     #@jwt_required
     def delete(self, id):
+        """Deletes Orden Medica"""
         OrdenMedica = OrdenMedica.objects.get(id=id).delete()
         return '', 200
 
