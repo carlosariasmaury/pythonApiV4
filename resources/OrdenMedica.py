@@ -6,14 +6,14 @@ from flask_restful import Resource
 
 class OrdenesMedicasApi(Resource):
     def get(self):
-        OrdenesMedicas = OrdenMedica.objects().to_json()
-        return Response(OrdenesMedicas, mimetype="application/json", status=200)
+        ordenesmedicas = OrdenMedica.objects().to_json()
+        return Response(ordenesmedicas, mimetype="application/json", status=200)
 
     #@jwt_required
     def post(self):
         body = request.get_json()
-        OrdenMedica = OrdenMedica(**body).save()
-        id = OrdenMedica.id
+        ordenmedica = OrdenMedica(**body).save()
+        id = ordenmedica.id
         return {'id': str(id)}, 200
 
 
