@@ -27,12 +27,12 @@ class OrdenMedicaApi(Resource):
     #@jwt_required
     def delete(self, id):
         """Deletes Orden Medica"""
-        OrdenMedica = OrdenMedica.objects.get(id=id).delete()
+        ordenmedica = OrdenMedica.objects.get(id=id).delete()
         return '', 200
 
     def get(self, id):
         try:
-            OrdenMedica = OrdenMedica.objects.get(id=id).to_json()
-            return Response(OrdenMedica, mimetype="application/json", status=200)
+            ordenmedica  = OrdenMedica.objects.get(id=id).to_json()
+            return Response(ordenmedica , mimetype="application/json", status=200)
         except Exception as error:
             return Response(error, status=400, mimetype='application/json')
