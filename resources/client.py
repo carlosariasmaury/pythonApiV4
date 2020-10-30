@@ -9,7 +9,7 @@ class ClientsApi(Resource):
         clients = Client.objects().to_json()
         return Response(clients, mimetype="application/json", status=200)
 
-    @jwt_required
+    #@jwt_required
     def post(self):
         body = request.get_json()
         client = Client(**body).save()
@@ -18,13 +18,13 @@ class ClientsApi(Resource):
 
 
 class ClientApi(Resource):
-    @jwt_required
+    #@jwt_required
     def put(self, id):
         body = request.get_json()
         Client.objects.get(id=id).update(**body)
         return '', 200
 
-    @jwt_required
+    #@jwt_required
     def delete(self, id):
         client = Client.objects.get(id=id).delete()
         return '', 200
